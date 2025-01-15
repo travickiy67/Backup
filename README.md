@@ -29,8 +29,13 @@
  - Необходимо сделать так, чтобы rsync подсчитывал хэш-суммы для всех файлов, даже если их время модификации и размер идентичны в источнике и приемнике.
  - На проверку направить скриншот с командой и результатом ее выполнения
 
+*Скриншот 1*  
 
-![Название скриншота](https://github.com/travickiy67/Backup/blob/main/img/1.1.png)
+![скриншот](https://github.com/travickiy67/Backup/blob/main/img/1.1.png)
+
+*Скриншот 2*  
+
+![скриншот](https://github.com/travickiy67/Backup/blob/main/img/1.2.png)
 
 
 ---
@@ -51,6 +56,22 @@ echo $date > /var/log/cron.log
 rsync -avog --delete /home/travitskii/ . /tmp/backup >>/var/log/cron.log 2>>&1
 
 ```
+*Скриншот 1*  
+
+![скриншот](https://github.com/travickiy67/Backup/blob/main/img/2.1.png)
+
+*Скриншот 2*  
+
+![скриншот](https://github.com/travickiy67/Backup/blob/main/img/2.2.png)
+
+*Скриншот 1*  
+
+![скриншот](https://github.com/travickiy67/Backup/blob/main/img/2.3.png)
+
+*Скриншот 4*
+
+![скриншот](https://github.com/travickiy67/Backup/blob/main/img/2.4.png)
+
 ---
 
 ### Задание 3
