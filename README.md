@@ -58,19 +58,19 @@ rsync -avog --delete /home/travitskii/ . /tmp/backup >>/var/log/cron.log 2>>&1
 ```
 *Скриншот 1*  
 
-![скриншот](https://github.com/travickiy67/Backup/blob/main/img/2.1.png)
+![скриншот](https://github.com/travickiy67/Backup/blob/main/img/2.1.png)  
 
 *Скриншот 2*  
 
-![скриншот](https://github.com/travickiy67/Backup/blob/main/img/2.2.png)
+![скриншот](https://github.com/travickiy67/Backup/blob/main/img/2.2.png)  
 
 *Скриншот 1*  
 
-![скриншот](https://github.com/travickiy67/Backup/blob/main/img/2.3.png)
+![скриншот](https://github.com/travickiy67/Backup/blob/main/img/2.3.png)  
 
-*Скриншот 4*
+*Скриншот 4*  
 
-![скриншот](https://github.com/travickiy67/Backup/blob/main/img/2.4.png)
+![скриншот](https://github.com/travickiy67/Backup/blob/main/img/2.4.png)  
 
 ---
 
@@ -79,9 +79,9 @@ rsync -avog --delete /home/travitskii/ . /tmp/backup >>/var/log/cron.log 2>>&1
 *скрины работы скрипта с ограничением лимита и без ограничения, так как копировал домашнюю*  
 *папку целиком, ограничение поставил 10000 КБ. Для удобства время вывел в консоль*  
 
-![скриншот](https://github.com/travickiy67/Backup/blob/main/img/3.1.png)
+![скриншот](https://github.com/travickiy67/Backup/blob/main/img/3.1.png)  
 
-![скриншот](https://github.com/travickiy67/Backup/blob/main/img/3.2.png) 
+![скриншот](https://github.com/travickiy67/Backup/blob/main/img/3.2.png)  
 *Скрипт*  
 ```
 #!/bin/sh
