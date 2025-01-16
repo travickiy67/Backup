@@ -78,7 +78,7 @@ rsync -avog --delete /home/travitskii/ . /tmp/backup >>/var/log/cron.log 2>>&1
 
 *скрины работы скрипта с ограничением лимита и без ограничения, так как копировал домашнюю*  
 *папку целиком, ограничение поставил 10000 КБ. Для удобства время вывел в консоль*  
-
+*Перед копированием удалял архив, правда и без удаления было заметно замедление*
 ![скриншот](https://github.com/travickiy67/Backup/blob/main/img/3.1.png)  
 
 ![скриншот](https://github.com/travickiy67/Backup/blob/main/img/3.2.png)  
