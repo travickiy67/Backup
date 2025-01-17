@@ -110,4 +110,6 @@ echo "$difference seconds"
 
 ### Задание 4
 
+*Скрипт*
 
+![скрипт](https://github.com/travickiy67/Backup/blob/main/files/test_baskup.sh)
