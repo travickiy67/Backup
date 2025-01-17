@@ -113,3 +113,19 @@ echo "$difference seconds"
 *Скрипт*
 
 [скрипт](https://github.com/travickiy67/Backup/blob/main/files/test_baskup.sh)
+
+`Скрипт реально рабочий, чтото сам где интернет. Заработал, но директиву --link-dest заставить работать не получилось, может`  
+`потому, что я не понял концепцию, может она просто не работает. В интернете не удалось найти рабочий скрипт с этой командой.`
+`Скрины выполнения скрипта`
+
+*Первый запуск без ошибки, последующие ругается на --link-dest*  
+
+![скриншот](https://github.com/travickiy67/Backup/blob/main/img/4.1.png)  
+
+*Бэкапы*  
+
+![скриншот](https://github.com/travickiy67/Backup/blob/main/img/4.2.png)  
+
+*Востанавливает*  
+
+![скриншот](https://github.com/travickiy67/Backup/blob/main/img/4.3.png)  
