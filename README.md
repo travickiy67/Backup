@@ -55,12 +55,12 @@
 #!/bin/sh
 date=$(date '+%Y-%m-%d %H:%M:%S')
 echo $date > /var/log/cron.log
-rsync -avog --delete /home/travitskii/ . /tmp/backup >/dev/null 2>>/var/log/cron.log
+rsync -ac --delete /home/travitskii/ . /tmp/backup >/dev/null 2>>/var/log/cron.log
 if [ $? -eq 0 ]; then
     echo "[$(date)] Резервное копирование успешно выполнено" >> /var/log/cron.log
 else
     echo "[$(date)] Ошибка при выполнении резервного копирования" >> /var/log/cron.log
-f
+
 ```
 *Скриншот 1*  
 
@@ -98,13 +98,13 @@ f
 START_TIME=$(date +%s)
 date=$(date '+%Y-%m-%d %H:%M:%S')
 echo $date > /var/log/cron.log
-rsync -avog --bwlimit=10000  --delete /home/travitskii/ . /tmp/backup >/dev/null 2>>/var/log/cron.log
+rsync -ac --bwlimit=10000  --delete /home/travitskii/ . /tmp/backup >/dev/null 2>>/var/log/cron.log
 END_TIME=$(date +%s)
 difference=$(( $END_TIME - $START_TIME ))
 echo "$difference seconds"
 
 ```
-*Передача на другую машину файла*  
+*Или так:Передача на другую машину, файла*  
 
 ![скриншот](https://github.com/travickiy67/Backup/blob/main/img/3.2.png)  
 
