@@ -29,6 +29,8 @@
  - Необходимо сделать так, чтобы rsync подсчитывал хэш-суммы для всех файлов, даже если их время модификации и размер идентичны в источнике и приемнике.
  - На проверку направить скриншот с командой и результатом ее выполнения
 
+**Исключены только директории, скрытые файлы сохранены**  
+
 *Скриншот 1*  
 
 ![скриншот](https://github.com/travickiy67/Backup/blob/main/img/1.1.png)
@@ -53,8 +55,12 @@
 #!/bin/sh
 date=$(date '+%Y-%m-%d %H:%M:%S')
 echo $date > /var/log/cron.log
-rsync -avog --delete /home/travitskii/ . /tmp/backup >>/var/log/cron.log 2>>&1
-
+rsync -avog --delete /home/travitskii/ . /tmp/backup >/dev/null 2>>/var/log/cron.log
+if [ $? -eq 0 ]; then
+    echo "[$(date)] Резервное копирование успешно выполнено" >> /var/log/cron.log
+else
+    echo "[$(date)] Ошибка при выполнении резервного копирования" >> /var/log/cron.log
+f
 ```
 *Скриншот 1*  
 
@@ -64,7 +70,7 @@ rsync -avog --delete /home/travitskii/ . /tmp/backup >>/var/log/cron.log 2>>&1
 
 ![скриншот](https://github.com/travickiy67/Backup/blob/main/img/2.2.png)  
 
-*Скриншот 1*  
+*Скриншот 3*  
 
 ![скриншот](https://github.com/travickiy67/Backup/blob/main/img/2.3.png)  
 
@@ -72,13 +78,17 @@ rsync -avog --delete /home/travitskii/ . /tmp/backup >>/var/log/cron.log 2>>&1
 
 ![скриншот](https://github.com/travickiy67/Backup/blob/main/img/2.4.png)  
 
+**Искуственно сгенерированая ошибка**  
+
+![скриншот](https://github.com/travickiy67/Backup/blob/main/img/2.5.png)   
+
 ---
 
 ### Задание 3
 
 *скрины работы скрипта с ограничением лимита и без ограничения, так как копировал домашнюю*  
 *папку целиком, ограничение поставил 10000 КБ. Для удобства время вывел в консоль*  
-*Перед копированием удалял архив, правда и без удаления было заметно замедление*
+*Перед копированием удалял архив, правда и без удаления было заметно медленнеее*
 ![скриншот](https://github.com/travickiy67/Backup/blob/main/img/3.1.png)  
 
 ![скриншот](https://github.com/travickiy67/Backup/blob/main/img/3.2.png)  
@@ -88,12 +98,16 @@ rsync -avog --delete /home/travitskii/ . /tmp/backup >>/var/log/cron.log 2>>&1
 START_TIME=$(date +%s)
 date=$(date '+%Y-%m-%d %H:%M:%S')
 echo $date > /var/log/cron.log
-rsync -avog --bwlimit=10000  --delete /home/travitskii/ . /tmp/backup >>/var/lo>
+rsync -avog --bwlimit=10000  --delete /home/travitskii/ . /tmp/backup >/dev/null 2>>/var/log/cron.log
 END_TIME=$(date +%s)
 difference=$(( $END_TIME - $START_TIME ))
 echo "$difference seconds"
 
 ```
+*Передача на другую машину файла*  
+
+![скриншот](https://github.com/travickiy67/Backup/blob/main/img/3.2.png)  
+
 ### Задание 4
 
 `Приведите ответ в свободной форме........`
