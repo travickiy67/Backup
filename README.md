@@ -112,4 +112,4 @@ echo "$difference seconds"
 
 *Скрипт*
 
-![скрипт](https://github.com/travickiy67/Backup/blob/main/files/test_baskup.sh)
+[скрипт](https://github.com/travickiy67/Backup/blob/main/files/test_baskup.sh)
