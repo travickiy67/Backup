@@ -106,7 +106,7 @@ echo "$difference seconds"
 ```
 *Или так:Передача на другую машину, файла*  
 
-![скриншот](https://github.com/travickiy67/Backup/blob/main/img/3.2.png)  
+![скриншот](https://github.com/travickiy67/Backup/blob/main/img/3.3.png)  
 
 ### Задание 4
 
